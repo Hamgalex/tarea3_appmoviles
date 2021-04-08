@@ -48,5 +48,9 @@ export class HomeComponent implements OnInit {
       this.obtenerPokemonAleatorio();
     }
   }
-
+  goShowdown()
+  {
+      window.location.href='https://pokemonshowdown.com/'; 
+  }
+  
 }

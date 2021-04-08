@@ -1,9 +1,11 @@
+
+
 <h2 class="text-center">Pokemon</h2>
 
-<div class="card align-self-center">
-    <div class="container">
-        <div class="row" id="main">
-            <table class="table">
+
+    <div >
+        <div>
+            <table width="100%">
                 <thead>
                     <th scope="col"># ID</th>
                     <th scope="col">Name</th>
@@ -23,7 +25,14 @@
                 </tbody>
             </table>  
         </div>
-        
+        <div>
+            <h1>Import for Pokemon Showdown</h1>
+            <span *ngFor="let pokemon of listaPokemon">
+                <h3>{{pokemon.name}}</h3>
+            </span>
+        </div>
+        <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">
+          Go to Pokémon Showdown
+        </button>
         
     </div>
-</div>
