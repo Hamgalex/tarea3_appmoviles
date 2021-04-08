@@ -1,0 +1,62 @@
+*{
+    font-family: 'Roboto';
+    margin: 0px;
+    padding: 0px;
+    text-align:center;
+}
+
+
+
+
+
+img{
+    max-width: 100px;
+}
+
+#main{
+    background-color: #FFFFFF;
+}
+
+.container{
+text-align: center;
+
+}
+table{
+    
+    border: solid rgb(95, 95, 95) 2px;
+    border-radius: 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+table thead{
+    background-color: rgb(253, 77, 77);
+    color:#FFFFFF;
+    text-align: center;
+}
+
+table td{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+table img{
+    min-width: 60px;   
+}
+
+.pID{
+    font-weight: 600;
+}
+
+.rItem{
+    width: 100%;
+    background-color: rgb(253, 77, 77);
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:#FFF;
+}
+

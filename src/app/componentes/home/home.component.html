@@ -1,6 +1,6 @@
 <h2 class="text-center">Pokemon</h2>
 
-<div class="container text-center">
+<div class="card align-self-center">
     <div class="container">
         <div class="row" id="main">
             <table class="table">
@@ -16,13 +16,14 @@
                     <tr *ngFor="let pokemon of listaPokemon">
                         <td>{{pokemon.id}}</td>
                         <td>{{pokemon.name}}</td>
-                        <td>{{pokemon.name}}</td>
-                        <td>{{pokemon.type1}}</td>
-                        <td>{{pokemon.weight}}</td>
+                        <td><img src="https://img.pokemondb.net/sprites/sword-shield/icon/{{pokemon.name}}.png"></td>
+                        <td><img src="https://www.serebii.net/pokedex-bw/type/{{pokemon.types[0].type.name}}.gif"><figure *ngIf="pokemon.types[1]!=undefined"><img  src="https://www.serebii.net/pokedex-bw/type/{{pokemon.types[1].type.name}}.gif" ></figure></td>
+                        <td>{{pokemon.weight/10}} kgs</td>
                     </tr>
                 </tbody>
             </table>  
         </div>
+        
         
     </div>
 </div>
