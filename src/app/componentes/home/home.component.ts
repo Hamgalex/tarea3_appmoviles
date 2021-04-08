@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
   }
   goShowdown()
   {
-      window.location.href='https://pokemonshowdown.com/'; 
+      window.location.href='https://play.pokemonshowdown.com/'; 
   }
   
 }
