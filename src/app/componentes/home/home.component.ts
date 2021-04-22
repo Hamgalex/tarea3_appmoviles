@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   constructor(private servicio:HomeService) { }
 
   direccion: string = 'https://pokeapi.co/api/v2/pokemon/';
-  importshowdown:string="";
   listaPokemon: Pokemon[]=[];
   index=0;
 
@@ -27,11 +26,6 @@ export class HomeComponent implements OnInit {
     const dato:Pokemon=await respuesta.json();
     this.listaPokemon[this.index]= dato;
     this.index++;
-    if(dato.types[1]!=undefined)
-    {
-      this.importshowdown+="penis";
-    }
-    this.importshowdown+=this.listaPokemon[this.index-1].name+"\n";
   }
 
    obtenerPokemonAleatorio()
@@ -43,7 +37,7 @@ export class HomeComponent implements OnInit {
    obtener5Pokemon()
   {
     let i:number=0;
-    for(i=0;i<5;i++)
+    for(i=0;i<=5;i++)
     {
       this.obtenerPokemonAleatorio();
     }

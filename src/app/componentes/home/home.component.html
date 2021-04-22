@@ -1,39 +1,54 @@
 
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
 
-<h2 class="text-center">Pokemon</h2>
+<body>
+<h2 class="text-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1024px-International_Pok%C3%A9mon_logo.svg.png" class="logo"></h2>
 
 
-    <div >
-        <div>
-            <table width="100%">
-                <thead>
-                    <th scope="col"># ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Weight</th>
+<div >
+    <div>
+        <table width="100%" class="table">
+            <thead>
+                <th scope="col" name="col-1"># ID</th>
+                <th scope="col" name="col-2">Name</th>
+                <th scope="col" name="col-3">Image</th>
+                <th scope="col" name="col-4">Type</th>
+                <th scope="col" name="col-5">Weight</th>
+                
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let pokemon of listaPokemon">
                     
-                </thead>
-                <tbody>
-                    <tr *ngFor="let pokemon of listaPokemon">
-                        <td>{{pokemon.id}}</td>
-                        <td>{{pokemon.name}}</td>
-                        <td><img src="https://img.pokemondb.net/sprites/sword-shield/icon/{{pokemon.name}}.png"></td>
-                        <td><img src="https://www.serebii.net/pokedex-bw/type/{{pokemon.types[0].type.name}}.gif"><figure *ngIf="pokemon.types[1]!=undefined"><img  src="https://www.serebii.net/pokedex-bw/type/{{pokemon.types[1].type.name}}.gif" ></figure></td>
-                        <td>{{pokemon.weight/10}} kgs</td>
-                    </tr>
-                </tbody>
-            </table>  
-        </div>
-        <div>
-            <h1>Import for Pokemon Showdown</h1>
-            <span *ngFor="let pokemon of listaPokemon">
-                <h3>{{pokemon.name}}</h3>
-                <br>
-            </span>
-        </div>
-        <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">
-          Go to Pokémon Showdown
-        </button>
-        
+                    <td name="col-1">{{pokemon.id}}</td>
+                    <td name="col-2">{{pokemon.name}}</td>
+                    <td name="col-3"><img src="https://img.pokemondb.net/sprites/sword-shield/icon/{{pokemon.name}}.png" class="Info"></td>
+                    <td name="col-4"><img src="https://www.serebii.net/pokedex-bw/type/{{pokemon.types[0].type.name}}.gif"class="Info"><figure *ngIf="pokemon.types[1]!=undefined"><img  src="https://www.serebii.net/pokedex-bw/type/{{pokemon.types[1].type.name}}.gif" ></figure></td>
+                    <td name="col-5">{{pokemon.weight/10}} kgs</td>
+                </tr>
+            </tbody>
+        </table>  
     </div>
+    <div>
+        <br>
+        <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">Import for Pokémon Showdown</button>
+        <br><br>
+        <span *ngFor="let pokemon of listaPokemon">
+            <h4>{{pokemon.name}} @ Leftovers</h4>
+            <br>
+        </span>
+    </div>
+    <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">
+        <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_296c7803aa594af69d39b970927c8fb9/media/game_avatars/gZ/gZD33IGFKuOGje6a.png" class="Info">
+    </button>
+    
+</div>
+</body>
