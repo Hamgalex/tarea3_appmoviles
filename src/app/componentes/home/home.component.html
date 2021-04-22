@@ -37,18 +37,21 @@
             </tbody>
         </table>  
     </div>
-    <div>
-        <br>
-        <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">Import for Pokémon Showdown</button>
-        <br><br>
-        <span *ngFor="let pokemon of listaPokemon">
-            <h4>{{pokemon.name}} @ Leftovers</h4>
-            <br>
-        </span>
+    <button type="button" (click) ="toggleDisplay()" class="btn btn-primary center my-2">Import for Pokémon Showdown</button>
+    <div [hidden]="isShow" >
+        <div>
+           
+            <span *ngFor="let pokemon of listaPokemon">
+                <h4>{{pokemon.name}} @ Leftovers</h4>
+                <br>
+            </span>
+
+        </div>
+
+        <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">
+            <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_296c7803aa594af69d39b970927c8fb9/media/game_avatars/gZ/gZD33IGFKuOGje6a.png" class="Info">
+        </button>
     </div>
-    <button type="button" (click)="goShowdown()" class="btn btn-primary center my-2">
-        <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_296c7803aa594af69d39b970927c8fb9/media/game_avatars/gZ/gZD33IGFKuOGje6a.png" class="Info">
-    </button>
     
 </div>
 </body>

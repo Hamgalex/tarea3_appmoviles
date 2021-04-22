@@ -15,6 +15,12 @@ export class HomeComponent implements OnInit {
   listaPokemon: Pokemon[]=[];
   index=0;
 
+  isShow = true;
+ 
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
+
   ngOnInit(): void {
     this.obtener5Pokemon();
   }
